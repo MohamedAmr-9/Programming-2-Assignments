@@ -55,26 +55,26 @@ def clear_inputs():
     loan_years_entry.delete(0, tk.END)
     result_label.config(text="")
 
-# Create GUI
+
 bank = tk.Tk()
 bank.title("Bank Misr - Plan Your Loan Application")
 bank.geometry("500x500+450+150")
 
 
-# Background_Bank Misr Image
+
 background_image = tk.PhotoImage(file="BankMisr 2.png")
 background_label = tk.Label(bank, image=background_image)
 background_label.pack()
 
-# Labels //job,loan_amount,Loan_Years//
+
 tk.Label(bank, text="Welcome to Banque Misr", font=('Arial Rounded MT Bold', 25), ).place(x=60, y=10)
-tk.Label(bank, text="Job:", font=('Arial Rounded MT Bold', 12), bg="#871E35").place(x=60, y=60)
-tk.Label(bank, text="Loan Amount:", font=('Arial Rounded MT Bold', 12), bg="#871E35").place(x=60, y=100)
-tk.Label(bank, text="Loan Years:", font=('Arial Rounded MT Bold', 12), bg="#871E35").place(x=60, y=140)
+tk.Label(bank, text="Job:", font=('Arial Rounded MT Bold', 12), bg="#871E35",fg="white").place(x=60, y=60)
+tk.Label(bank, text="Loan Amount:", font=('Arial Rounded MT Bold', 12), bg="#871E35",fg="white").place(x=60, y=100)
+tk.Label(bank, text="Loan Years:", font=('Arial Rounded MT Bold', 12), bg="#871E35",fg="white").place(x=60, y=140)
 result_label = tk.Label(bank, text="", font=('Arial Rounded MT Bold', 10), bg="#ffffff", justify="left")
 result_label.place(x=50, y=340)
 
-# Entry widgets
+
 job_entry = tk.Entry(bank)
 job_entry.place(x=200, y=60)
 loan_amount_entry = tk.Entry(bank)
@@ -82,7 +82,7 @@ loan_amount_entry.place(x=200, y=100)
 loan_years_entry = tk.Entry(bank)
 loan_years_entry.place(x=200, y=140)
 
-# Buttons //Calculate,Clear,Exit//
+
 calculate_button = tk.Button(bank, text="Calculate", font=('Arial Rounded MT Bold', 10), bg='#03c969', command=calculate_loan)
 calculate_button.place(x=150, y=180)
 clear_button = tk.Button(bank, text="Clear",font=('Arial Rounded MT Bold', 10), bg='#9c9fa3', command=clear_inputs)
@@ -91,4 +91,3 @@ exit_button = tk.Button(bank, text="Exit",font=('Arial Rounded MT Bold', 10), bg
 exit_button.place(x=330, y=180)
 
 bank.mainloop()
-
